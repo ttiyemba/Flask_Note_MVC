@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+<h3>Edit notebook:</h3>
+    <form method="POST" action = {{ url_for ( 'notebook_update') }}>
+        <h4>Id:</h4>
+        <input name="id" value = "{{notebook.id}}" readonly/>
+        <h4>Title:</h4>
+        <input placeholder="Please enter a title " name="title" value="{{notebook.title}}"/>
+        <button type="submit">Update</button>
+    </form>
+
+{% endblock %}
+
+
+
+
+
